@@ -1,8 +1,10 @@
 import { View, TouchableOpacity, Text, Image } from "react-native";
 import React from "react";
 import CustomButton from "./Custombutton";
+import { useRouter } from "expo-router";
 
 const Login = () => {
+    const router = useRouter();
     return (
         <View className="flex-1 bg-gray-900">
             
@@ -31,7 +33,7 @@ const Login = () => {
 
                 
                 <View className="flex-1 mt-4">
-                    <CustomButton containerStyle="px-28 py-4" onPress={()=>console.log("press")} title='Get Started'/>
+                    <CustomButton containerStyle="px-28 py-4" onPress={()=>router.push('/auth/sign_in')} title='Get Started'/>
                 </View>
             </View>
         </View>
